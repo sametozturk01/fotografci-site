@@ -1167,3 +1167,40 @@ footer a:hover::after {
 }
 
 
+/* --- YENİ DİKKAT ÇEKİCİ WHATSAPP BUTONU --- */
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 25px;      /* Alttan boşluk (biraz artırdık) */
+    right: 25px;       /* Sağdan boşluk (biraz artırdık) */
+    z-index: 999999;   /* Her şeyin üstünde görünsün */
+    transition: 0.3s ease;
+    
+    /* YANIP SÖNME ANİMASYONU BURADA BAŞLIYOR */
+    animation: whatsapp-pulse 2s infinite; 
+    border-radius: 50%; /* Gölgenin yuvarlak olması için */
+}
+
+.whatsapp-fixed img {
+    width: 65px;       /* BOYUTU BÜYÜTTÜK (Eskisi 60'tı) */
+    height: 65px;
+    filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.4)); /* Gölgeyi belirginleştirdik */
+}
+
+/* Üzerine gelince büyüme efekti (Animasyonla çakışmaması için) */
+.whatsapp-fixed:hover {
+    animation: none; /* Üzerine gelince yanıp sönmeyi durdur */
+    transform: scale(1.1); /* Biraz daha büyüt */
+}
+
+/* --- YANIP SÖNME (PULSE) ANİMASYONU KODLARI --- */
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); /* WhatsApp yeşili gölge */
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); /* Gölgeyi dışarı doğru büyüt ve şeffaflaştır */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); /* Gölgeyi sıfırla */
+    }
+}
