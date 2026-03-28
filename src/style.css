@@ -344,15 +344,6 @@ footer { padding: 60px; text-align: center; color: var(--text-dim); border-top: 
     border: 1px solid rgba(197, 160, 89, 0.2);
 }
 
-/* Mobil Uyumluluk */
-@media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-trust-badges { 
-        flex-direction: column; 
-        gap: 10px; 
-        align-items: center; 
-    }
-}
 
 /* --- MODERN & LUXURY İLETİŞİM --- */
 .contact {
@@ -936,7 +927,6 @@ a, button {
     }
 
     .nav-container {
-        flex-direction: column;
         align-items: center;
         gap: 10px;
     }
@@ -1016,4 +1006,83 @@ footer a::after {
 
 footer a:hover::after {
     width: 100%;
+}
+
+
+    @media (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+
+    /* 🔥 LOGO KÜÇÜLT */
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    /* 🔥 MENÜ YAZILARI KÜÇÜLT */
+    .nav-links a {
+        font-size: 12px;
+        padding: 5px 6px;
+    }
+
+    /* 🔥 BAŞLIK KÜÇÜLT */
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    /* 🔥 PARAGRAF */
+    p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .logo,
+    .logo a,
+    .brand {
+        font-size: 16px;   /* küçült */
+        font-weight: 600;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .logo-text {
+        font-size: 11px;   /* istediğin gibi 14–18 arası ayarlayabilirsin */
+        font-weight: 100;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-trust-badges {
+        display: flex;
+        flex-direction: column;   /* alt alta */
+        align-items: center;      /* ortala */
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .hero-trust-badges span {
+        display: block;
+        font-size: 13px;
+    }
+
 }
