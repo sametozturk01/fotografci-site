@@ -245,15 +245,20 @@
 </section>
 
 <script>
-    // Sayfa yenilendiğinde scroll konumunu en üste (0,0) çeker
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    };
-
+    // 1. Yöntem: Tarayıcının hatırlama özelliğini kapat
     if ('scrollRestoration' in history) {
-        // Tarayıcının "kaldığın yerden devam et" özelliğini kapatır
         history.scrollRestoration = 'manual';
     }
+
+    // 2. Yöntem: Sayfa yüklenir yüklenmez en üste fırlat
+    window.scrollTo(0, 0);
+
+    // 3. Yöntem: Garanti olsun diye sayfa tamamen hazır olduğunda tekrarla
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 1); // 1 milisaniyelik gecikme tarayıcının "yer hatırlama" inadını kırar
+    });
 </script>
 
 <!-- HTML Kısmını Bununla Değiştir -->
