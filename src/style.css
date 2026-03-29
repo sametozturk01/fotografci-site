@@ -1360,3 +1360,54 @@ footer a:hover::after {
     }
 }
 
+/* 1. Hero ve Timeline'ı birbirine bağla */
+.luxury-hero-slider {
+    margin-bottom: 0 !important;
+}
+
+.trust-timeline-section {
+    margin-top: -80px; /* Hero'nun üzerine hafifçe bindirerek boşluğu kapatır */
+    padding-top: 100px !important;
+    background-color: #020712; /* Alt zemin rengi */
+    position: relative;
+    z-index: 5;
+    overflow: visible; /* Parlamanın yukarı taşması için */
+}
+
+/* 2. Yumuşak Geçiş Maskesi (Fade to Black) */
+.trust-timeline-section::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    height: 121px;
+    /* Hero fotoğrafından zemine yumuşak geçiş */
+    background: linear-gradient(to bottom, transparent, #020712 95%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 3. O istediğin "Doğal ve Hafif" Parlama (Glow) */
+.trust-timeline-section::after {
+    content: "";
+    position: absolute;
+    top: -40px; /* Tam geçiş bölgesinde başlasın */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Çok geniş değil, odaklı */
+    height: 180px;
+    /* Opaklığı %10'a çektim (çok hafif olması için) */
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+    filter: blur(50px); /* Işığı iyice dağıtarak doğallaştırır */
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* 4. Başlık için çok hafif bir derinlik (Opsiyonel) */
+.glow-text {
+    position: relative;
+    z-index: 10;
+    color: #f8fafc;
+    text-shadow: 0 0 15px rgba(99, 102, 241, 0.3); /* Yazının altındaki hafif ışık */
+}
