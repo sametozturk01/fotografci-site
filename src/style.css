@@ -1204,3 +1204,159 @@ footer a:hover::after {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); /* Gölgeyi sıfırla */
     }
 }
+
+
+
+/* Butonun kendisine ait tasarım */
+.btn-contact {
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 30px !important;
+    line-height: 1 !important;
+    padding: 0 16px !important; /* Yanları biraz açtık ki yuvarlaklık daha güzel dursun */
+    
+    /* YUVARLAKLIK (KAPSÜL TASARIMI) */
+    border-radius: 50px !important; /* Tam oval yapar */
+    
+    /* YAZI FONTU VE STİLİ */
+    font-family: 'Montserrat', 'Poppins', sans-serif !important; /* Modern ve temiz fontlar */
+    font-size: 11px !important;
+    font-weight: 700 !important; /* Biraz kalınlaştırdık ki okunsun */
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important; /* Harf arasını açmak lüks hissi verir */
+    
+    /* RENKLER */
+    background-color: #c5a059 !important;
+    color: #050b18 !important;
+    text-decoration: none !important;
+    border: none !important;
+    transition: 0.3s all ease;
+}
+
+/* Üzerine gelince (Hover) efekti */
+.btn-contact:hover {
+    background-color: #a38448 !important;
+    transform: scale(1.05); /* Çok hafif büyüme */
+}
+
+/* MOBİL İÇİN EKSTRA AYARLAR */
+@media (max-width: 768px) {
+    .nav-links {
+        /* Butonlar arasındaki mesafeyi burası belirler */
+        gap: 4px !important; /* Bu rakamı düşürürsen (örn: 3px) daha çok yaklaşırlar */
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+
+    .btn-contact {
+        padding: 0 10px !important;
+        font-size: 9px !important;
+        height: 28px !important;
+        border-radius: 30px !important; /* Tam yuvarlak (Oval) */
+        margin: 0 !important; /* Dış boşlukları sıfırla ki gap tam çalışsın */
+    }
+}
+
+/* --- TİMELİNE BÖLÜMÜ ORTALAMA AYARLARI --- */
+.trust-timeline-section {
+    width: 100%;
+    padding: 60px 20px; /* Üstten ve alttan nefes alma boşluğu */
+    display: flex;
+    justify-content: center; /* Tüm kutuları sayfanın ortasına hizalar */
+    background-color: transparent; /* Arka plan rengini senin sitenden alır */
+}
+
+.timeline-wrapper {
+    width: 100%;
+    max-width: 600px; /* Kutuların maksimum genişliği (Çok uzamasını engeller) */
+}
+
+/* Geri kalan tasarım aynı kalıyor */
+.timeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background-color: rgba(197, 160, 89, 0.2);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 45px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 10px;
+    top: 24px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #c5a059;
+    box-shadow: 0 0 0 5px rgba(197, 160, 89, 0.15);
+}
+
+.timeline-card {
+    background-color: #0b1221;
+    border-radius: 12px;
+    padding: 20px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-2px);
+    background-color: #101a2e;
+    border-color: rgba(197, 160, 89, 0.3);
+}
+
+.timeline-subtitle {
+    display: block;
+    color: #c5a059;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timeline-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.timeline-desc {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* MOBİL UYUM */
+@media (max-width: 768px) {
+    .trust-timeline-section {
+        padding: 40px 15px;
+    }
+    .timeline-card {
+        padding: 16px;
+    }
+    .timeline-title {
+        font-size: 16px;
+    }
+    .timeline-desc {
+        font-size: 12px;
+    }
+}
+

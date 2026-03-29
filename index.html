@@ -43,7 +43,7 @@
                 <span class="logo-text">ÇUKURAMBAR <span>FOTO</span></span>
             </a>
             <div class="nav-links">
-                <a href="#hizmetler">Hizmetlerimiz</a>
+                <a href="#hizmetler"class="btn-contact">Hizmetlerimiz</a>
                 <a href="#iletisim" class="btn-contact">İletişim</a>
             </div>
         </div>
@@ -76,8 +76,8 @@
         
         <!-- Kurumsal Alt Metin: Hizmetlerin kapsamını ve hızını belirtir -->
         <p>
-            Amerika, Schengen ve tüm dünya ülkelerinin resmi standartlarına uygun, 
-            <strong>5 dakikada teslim</strong> biyometrik çekimler. Ankara'nın vize fotoğrafı konusundaki uzman adresi.
+            Amerika, Schengen ve tüm dünya ülkelerinin resmi biyometrik standartlarına uygun fotoğraflar, 
+         Ankara’da uzman ekibimiz tarafından yalnızca <strong>5 dakikada hazırlanır.</strong>
         </p>
         
         <div class="hero-btns">
@@ -86,20 +86,52 @@
             <a href="#hizmetler" class="btn-secondary">Hizmetlerimizi İnceleyin</a>
         </div>
         
-        <!-- Kurumsal Güven İkonları (Opsiyonel ama prestij sağlar) -->
-        <div class="hero-trust-badges">
-            <span>✓ %100 Kabul Garantisi</span>
-            <span>✓ Dijital Teslimat</span>
-            <span>✓ Uzman Rötuş</span>
+    </header>
+
+    <!-- === YENİ BÖLÜM: PROFESYONEL ÇÖZÜMLERİN HEMEN ÜSTÜ === -->
+<section class="trust-timeline-section">
+    <div class="timeline-wrapper">
+        <div class="timeline-container">
+            <!-- Arkadaki dikey çizgi -->
+            <div class="timeline-line"></div>
+
+            <!-- 1. Kart: Kabul Garantisi -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-subtitle">Resmi Onaylı</span>
+                    <h3 class="timeline-title">%100 Kabul Garantisi</h3>
+                    <p class="timeline-desc">Vize, pasaport ve kurumsal başvurularınız için çekilen fotoğraflarınız tüm resmi kurumlarda kesin kabul garantilidir.</p>
+                </div>
+            </div>
+
+            <!-- 2. Kart: Dijital Teslimat -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-subtitle">Hızlı Çözüm</span>
+                    <h3 class="timeline-title">Dijital Teslimat</h3>
+                    <p class="timeline-desc">Fotoğraflarınızı sadece baskı olarak değil, anında yüksek çözünürlüklü dijital formatta e-posta veya WhatsApp ile teslim ediyoruz.</p>
+                </div>
+            </div>
+
+            <!-- 3. Kart: Uzman Rötuş -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-subtitle">Profesyonel Dokunuş</span>
+                    <h3 class="timeline-title">Uzman Rötuş</h3>
+                    <p class="timeline-desc">Doğallığınızı bozmadan, en iyi halinizi yansıtacak profesyonel ve ince rötuş işlemleri uyguluyoruz.</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-    </header>
+</section>
     <section id="hizmetler" class="services">
     <div class="container">
         <div class="section-header">
             <div class="badge">PROFESYONEL ÇÖZÜMLER</div>
-            <h2>Çukurambar'ın En Kapsamlı <span>Fotoğraf Hizmetleri</span></h2>
+            <h2><span>Fotoğraf Hizmetleri</span></h2>
             <div class="line"></div>
         </div>
         
@@ -211,6 +243,18 @@
         </div>
     </div>
 </section>
+
+<script>
+    // Sayfa yenilendiğinde scroll konumunu en üste (0,0) çeker
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    };
+
+    if ('scrollRestoration' in history) {
+        // Tarayıcının "kaldığın yerden devam et" özelliğini kapatır
+        history.scrollRestoration = 'manual';
+    }
+</script>
 
 <!-- HTML Kısmını Bununla Değiştir -->
 <a href="https://wa.me/03122848636" class="whatsapp-fixed" target="_blank">
