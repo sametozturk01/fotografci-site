@@ -1411,3 +1411,12 @@ footer a:hover::after {
     color: #f8fafc;
     text-shadow: 0 0 15px rgba(99, 102, 241, 0.3); /* Yazının altındaki hafif ışık */
 }
+
+
+.luxury-hero-slider {
+  margin-bottom: 0;
+}
+
+.trust-timeline-section {
+  margin-top: -140px; /* istediğin kadar düşür */
+}
