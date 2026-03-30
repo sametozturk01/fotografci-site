@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cukurambarfoto.com/sitemap.xml
+Sitemap: https://www.çukurambarfoto.com/sitemap.xml
